@@ -2,19 +2,19 @@ name: Counter-Strike | Compiler
 
 on:
   push:
-    branches: ["main" ]
-
+    branches: [ "main" ]
 
 jobs:
-
   build:
-        runs-on: ubuntu-latest
-        steps:
-            -   name: Build and push docker image
-                uses: docker/build-push-action@v1
-                with:
-                    username: androcyber
-                    password: ${{ secrets.DOCKER_PASSWORD }}
-                    dockerfile: Dockerfile
-                    repository: androcyber/yolks
-                    tag_with_ref: true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Counter-Strike/compiler/Dockerfile --tag my-image-name:$(date +%s)
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        docker logout | 
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
+        docker image build -t androcyber/yolks:compiler .
+        docker push androcyber/yolks:compiler
