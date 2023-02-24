@@ -21,14 +21,13 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: ghcr.io
-        username: ${{ USERNAME }}
-        password: ${{ secrets.GHRC_PASSWORD }}
+        username: "${{ USERNAME }}"
+        password: "${{ secrets.GHRC_PASSWORD }}"
         
     - name: "Docker Image yayınlanıyor..."
       uses: docker/build-push-action@v4
       with:
-        run: docker logout
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ USERNAME }} --password-stdin
+        run: docker logout | echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ USERNAME }}" --password-stdin
         push: true
-        file: ./Counter-Strike/compiler/Dockerfile
-        tags: ${{ USERNAME }}/yolks:compiler
+        file: "./Counter-Strike/compiler/Dockerfile"
+        tags: "${{ USERNAME }}/yolks:compiler"
