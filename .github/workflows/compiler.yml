@@ -30,3 +30,6 @@ jobs:
         push: true
         file: ./Counter-Strike/compiler/Dockerfile
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/yolks:compiler
+        
+    - name: "Docker Hub'dan çıkış yapılıyor..."
+      run: docker logout
