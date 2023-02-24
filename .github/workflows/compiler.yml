@@ -17,7 +17,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHRC_PASSWORD }}
+          password: ${{ secrets.GHCR_PASSWD }}
       - uses: docker/build-push-action@v4
         with:
           context: ./Counter-Strike
