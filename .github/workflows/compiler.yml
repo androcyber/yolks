@@ -6,10 +6,10 @@ on:
 
 jobs:
   push:
-    name: "compiler"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
         with:
           buildkitd-flags: --debug
@@ -20,9 +20,7 @@ jobs:
           password: ${{ secrets.GHCR_PASSWD }}
       - uses: docker/build-push-action@v4
         with:
-          context: ./Counter-Strike
           file: ./Counter-Strike/compiler/Dockerfile
-          platforms: linux/amd64
           push: true
           tags: |
             ghcr.io/androcyber/yolks:compiler
