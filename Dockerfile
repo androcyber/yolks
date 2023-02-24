@@ -7,6 +7,8 @@ LABEL org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
 RUN apt -y update
 RUN apt -y upgrade
 RUN apt -y install lib32gcc1
+RUN apt -y install curl
+RUN apt -y install tar
 
 RUN useradd -d /home/container -m container
 
