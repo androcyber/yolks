@@ -3,8 +3,6 @@ name: Counter-Strike | Compiler
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
 
@@ -13,23 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
-    - name: "Docker Hub'dan çıkış yapılıyor..."
-      run: docker logout | echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
-      
-    - name: "Docker Hub'a giriş yapılıyor..."
-      uses: docker/login-action@v2
-      with:
-        registry: ghrc.io
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
-        
-    - name: "Docker Image yayınlanıyor..."
-      uses: docker/build-push-action@v4
-      with:
-        push: true
-        file: ./Counter-Strike/compiler/Dockerfile
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/yolks:compiler
-        
-    - name: "Docker Hub'dan çıkış yapılıyor..."
-      run: docker logout
+      - uses: actions/checkout@v3
+      - uses: docker/setup-qemu-action@v2
+      - uses: docker/setup-buildx-action@v2
+        with:
+          buildkitd-flags: --debug
+      - uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - uses: docker/build-push-action@v4
+        with:
+          file: ./Counter-Strike/compiler/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/androcyber/yolks:compiler
