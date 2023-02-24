@@ -2,9 +2,8 @@ name: Counter-Strike | Compiler
 
 on:
   push:
-    branches:
-    - "main/Counter-Strike/compiler/Dockerfile"
-    
+    branches: ["main" ]
+
 
 jobs:
 
@@ -13,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
