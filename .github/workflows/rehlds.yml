@@ -2,7 +2,7 @@ name: SteamCMD - ReHLDS
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - game-server/steamcmd/**
 jobs:
