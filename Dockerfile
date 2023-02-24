@@ -4,9 +4,9 @@ LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
 LABEL org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
 
-RUN apt update
-RUN apt upgrade
-RUN apt install -y lib32gcc1
+RUN apt -y update
+RUN apt -y upgrade
+RUN apt -y install lib32gcc1
 
 RUN useradd -d /home/container -m container
 
