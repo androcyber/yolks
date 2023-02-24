@@ -3,12 +3,20 @@ name: Counter-Strike | Compiler
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file ./Counter-Strike/compiler/Dockerfile --tag my-image-name:$(date +%s)
+    - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
         docker logout | 
