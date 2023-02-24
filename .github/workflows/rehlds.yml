@@ -1,0 +1,17 @@
+name: SteamCMD - ReHLDS
+on:
+  push:
+   branches: [ main ]
+  pull_request:
+    branches: [ main ]
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
+        docker image build -t dab8106/pyflask:latest .
+        docker push dab8106/pyflask:latest
