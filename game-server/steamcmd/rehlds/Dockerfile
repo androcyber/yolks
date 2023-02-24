@@ -2,7 +2,7 @@ FROM    ubuntu:18.04
 
 LABEL   author="androcyber" maintainer="destek@hiverianw.com"
 
-LABEL   org.opencontainers.image.source="https://github.com/androcyber/docker"
+LABEL   org.opencontainers.image.source="https://github.com/androcyber/yolks"
 
 COPY    requirements.txt requirements.txt
 RUN     aptt -y install -r requirements.txt
