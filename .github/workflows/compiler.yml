@@ -24,10 +24,9 @@ jobs:
         username: androcyber
         password: "${{ secrets.GHRC_PASSWORD }}"
         
-    - name: "Docker Image yayınlanıyor..."
-      uses: docker/build-push-action@v4
-      with:
-        run: docker logout | echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u androcyber --password-stdin
-        push: true
-        file: "./Counter-Strike/compiler/Dockerfile"
-        tags: "androcyber/yolks:compiler"
+    - name: Build & Push Image
+      run: |
+        docker logout | 
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "androcyber" --password-stdin
+        docker image build -t androcyber/yolks:compiler .
+        docker push androcyber/yolks:compiler
