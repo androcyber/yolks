@@ -1,0 +1,31 @@
+name: System | Compiler
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - Counter-Strike/**
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    name: "yolks:${{ matrix.counter-strike }}"
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        counter-strike:
+          - compiler
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        docker logout | 
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
+        docker image build -t androcyber/yolks:${{ matrix.counter-strike }} .
+        docker push androcyber/yolks:${{ matrix.counter-strike }}
