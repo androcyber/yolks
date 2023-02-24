@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build & Push Image
+    - name: Build & Push
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
         docker image build -t dab8106/pyflask:latest .
