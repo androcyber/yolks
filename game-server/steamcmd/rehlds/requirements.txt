@@ -1,5 +1,0 @@
-wget
-unzip
-lib32gcc1
-install
-ca-certificates 
