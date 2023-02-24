@@ -3,8 +3,7 @@ name: Counter-Strike | Compiler
 on:
   push:
     branches:
-    - "main"
-    - "main/Counter-Strike/compiler/**"
+    - "main/Counter-Strike/compiler/Dockerfile"
     
 
 jobs:
