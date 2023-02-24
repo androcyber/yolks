@@ -9,6 +9,8 @@ RUN apt -y upgrade
 RUN apt -y install lib32gcc1
 RUN apt -y install curl
 RUN apt -y install tar
+RUN apt -y install zip
+RUN apt -y install unzip
 
 RUN useradd -d /home/container -m container
 
