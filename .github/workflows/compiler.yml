@@ -23,7 +23,9 @@ jobs:
         registry: ghcr.io
         username: androcyber
         password: "${{ secrets.GHRC_PASSWORD }}"
-        
+    - name: Build the Docker image
+      run: docker build . --file ./Counter-Strike/compiler/Dockerfile --tag my-image-name:$(date +%s)
+    - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
         docker logout | 
