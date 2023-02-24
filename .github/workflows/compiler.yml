@@ -15,7 +15,7 @@ jobs:
     steps:
     
     - name: "Docker Hub'dan çıkış yapılıyor..."
-      run: docker logout
+      run: docker logout | echo "${{ secrets.DOCKERPW }}" | docker login -u "androcyber" --password-stdin
       
     - name: "Docker Hub'a giriş yapılıyor..."
       uses: docker/login-action@v2
