@@ -18,6 +18,6 @@ jobs:
     - name: Build & Push Image
       run: |
         docker logout | 
-        docker login ghcr.io -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin "${{ secrets.DOCKERHUB_PASSWORD }}"
+        docker login ghcr.io -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_PASSWORD }}"
         docker image build -t androcyber/yolks:compiler .
         docker push androcyber/yolks:compiler
