@@ -14,8 +14,8 @@ RUN apt -y install screen
 RUN useradd -d /home/container -m container
 
 RUN cd /tmp/
-RUN curl --no-progress-meter -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.2/rcon-0.10.2-amd64_linux.tar.gz > rcon.tar.gz
-RUN tar xf rcon.tar.gz
+RUN curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.2/rcon-0.10.2-amd64_linux.tar.gz
+RUN tar xf rcon-0.10.2-amd64_linux.tar.gz
 RUN mv rcon-0.10.2-amd64_linux/rcon /usr/local/bin/
 
 USER container
