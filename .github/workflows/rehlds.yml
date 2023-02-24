@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - game-server/steamcmd/**
+      - game-server/steamcmd/rehlds
 jobs:
   build:
     runs-on: ubuntu-latest
