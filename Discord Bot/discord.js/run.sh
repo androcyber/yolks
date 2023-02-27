@@ -18,7 +18,7 @@ cd /home/container
 INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export INTERNAL_IP
 
-# Startup Variables
+# Startup message
 echo "-------------------------------------------------------------------------------------------------------------"
 echo "HIVERIA | Sunucu başlatılıyor..."
 echo "-------------------------------------------------------------------------------------------------------------"
