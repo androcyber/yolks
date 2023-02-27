@@ -13,5 +13,5 @@ USER container
 ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
-COPY  ./run.sh /run.sh
-CMD   [ "/bin/bash", "/run.sh" ]
+COPY ./run.sh /run.sh
+CMD [ "/bin/bash", "/run.sh" ]
