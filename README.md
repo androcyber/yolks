@@ -7,5 +7,5 @@
 
 ## Minecraft Egg'S
 - Bedrock
-    - <b>Description:</b> A server software based Bedrock Server. 
+    - <b>Description:</b> A server software based on Bedrock Server.
     - <b>Download:</b> <code>ghcr.io/androcyber/yolks:bedrock</code>
