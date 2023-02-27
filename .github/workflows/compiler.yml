@@ -20,6 +20,7 @@ jobs:
           password: ${{ secrets.GHCR_PASSWD }}
       - uses: docker/build-push-action@v4
         with:
+          context: ./Counter-Strike/compiler
           file: ./Counter-Strike/compiler/Dockerfile
           push: true
           tags: |
