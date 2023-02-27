@@ -1,6 +1,6 @@
 #
 #
-#   Counter-Strike server software built using Rehlds. 
+#   A compiler for Counter-Strike plugins. 
 #
 #
 #                   SOCIAL MEDIA
@@ -15,7 +15,7 @@
 #
 cd /home/container
 
-# Startup Variables
+# Startup Message
 echo "-------------------------------------------------------------------------------------------------------------"
 echo "HIVERIA | Sunucu başlatılıyor..."
 echo "-------------------------------------------------------------------------------------------------------------"
