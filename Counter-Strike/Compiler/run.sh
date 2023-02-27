@@ -1,6 +1,6 @@
 #
 #
-#   A compiler for Counter-Strike plugins. 
+#   Counter-Strike server software built using Rehlds. 
 #
 #
 #                   SOCIAL MEDIA
@@ -16,7 +16,9 @@
 cd /home/container
 
 # Startup Variables
+echo "-------------------------------------------------------------------------------------------------------------"
 echo "HIVERIA | Sunucu başlatılıyor..."
+echo "-------------------------------------------------------------------------------------------------------------"
 
 # Run the Server
 eval ${STARTUP}
