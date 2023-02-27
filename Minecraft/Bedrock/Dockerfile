@@ -2,8 +2,6 @@ FROM ubuntu:18.04
 
 LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
-LABEL org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
-
 RUN apt -y update
 RUN apt -y upgrade
 RUN apt -y install libcurl4
