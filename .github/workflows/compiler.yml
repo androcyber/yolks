@@ -20,8 +20,8 @@ jobs:
           password: ${{ secrets.GHCR_PASSWD }}
       - uses: docker/build-push-action@v4
         with:
-          context: ./Counter-Strike/compiler
-          file: ./Counter-Strike/compiler/Dockerfile
+          context: ./Counter-Strike/Compiler
+          file: ./Counter-Strike/Compiler/Dockerfile
           push: true
           tags: |
             ghcr.io/androcyber/yolks:compiler
