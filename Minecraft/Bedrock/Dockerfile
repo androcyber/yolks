@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
 
 RUN apt -y update
 RUN apt -y upgrade
-RUN apt -y install libcurl3
+RUN apt -y install libcurl4
 
 RUN useradd -d /home/container -m container
 USER container
