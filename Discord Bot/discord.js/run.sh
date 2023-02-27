@@ -1,6 +1,6 @@
 #
 #
-#   Counter-Strike server software built using Rehlds. 
+#   A discord bot based on discord js.
 #
 #
 #                   SOCIAL MEDIA
@@ -15,10 +15,11 @@
 #
 cd /home/container
 
+# Variables
 INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export INTERNAL_IP
 
-# Startup message
+# Startup Message
 echo "-------------------------------------------------------------------------------------------------------------"
 echo "HIVERIA | Sunucu başlatılıyor..."
 echo "-------------------------------------------------------------------------------------------------------------"
