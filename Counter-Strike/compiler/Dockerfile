@@ -13,5 +13,5 @@ RUN apt -y update
 RUN apt -y upgrade
 RUN apt -y install lib32gcc1
 
-COPY ./Counter-Strike/compiler/run.sh /home/container/run.sh
-CMD [ "/bin/bash", "/run.sh" ]
+COPY  ./run.sh /run.sh
+CMD   [ "/bin/bash", "/run.sh" ]
