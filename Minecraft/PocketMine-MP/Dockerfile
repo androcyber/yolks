@@ -4,7 +4,7 @@ LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
 RUN apt -y update
 RUN apt -y upgrade
-RUN apt -y install libcurl4 php8.0
+RUN apt -y install php8.0
 
 RUN useradd -d /home/container -m container
 USER container
