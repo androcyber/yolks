@@ -13,7 +13,7 @@
     - <b>Description:</b> A server software based PocketMine-MP. 
     - <b>Download:</b> <code>ghcr.io/androcyber/yolks:pocketmine</code>
 
-### Discord Boy Egg's
+### Discord Bot Egg's
 - Discord.js
     - <b>Description:</b> A discord bot based on discord js.
     - <b>Download:</b> <code>ghcr.io/androcyber/yolks:discordjs</code>
