@@ -1,6 +1,6 @@
 # My Docker Images for Pterodactyl Egg's
 
-<center><a href="https://github.com/androcyber/eggs">Click here</a> to view my pterodactyl eggs.</center>
+<p align="center"><a href="https://github.com/androcyber/eggs">Click here</a> to view my pterodactyl egg's.</p>
 
 ### Counter-Strike Egg's
 - Compiler
