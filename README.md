@@ -1,5 +1,5 @@
 <h1 align="center">My Docker Images for Pterodactyl Egg's</h1>
-<h4 align="center"><a href="https://github.com/androcyber/eggs">Click here</a> to view my pterodactyl egg's.</h4><br>
+<h4 align="center"></h4><br>
 
 ### Counter-Strike Egg's
 - Compiler
