@@ -1,4 +1,4 @@
-# My Own Docker Images for Pterodactyl Egg's
+# My Docker Images for Pterodactyl Egg's
 
 <a href="https://github.com/androcyber/eggs">Click here</a> to view my pterodactyl eggs.
 
