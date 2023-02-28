@@ -16,4 +16,4 @@
 ## Discord Boy Egg's
 - Discord.js
     - <b>Description:</b> A discord bot based on discord js.
-    - <b>Download:</b> <code>FROM ghcr.io/androcyber/yolks:discordjs</code>
+    - <b>Download:</b> <code>ghcr.io/androcyber/yolks:discordjs</code>
