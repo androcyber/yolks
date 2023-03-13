@@ -9,4 +9,6 @@ RUN apt -y install lib32gcc1
 
 WORKDIR /home/container
 
-CMD [ "/bin/bash", "eval ${STARTUP}" ]
+RUN cp /run.sh /Counter-Strike/Compiler/run.sh
+
+CMD [ "/bin/bash", "/run.sh" ]
