@@ -9,5 +9,4 @@ RUN apt -y install lib32gcc1
 
 WORKDIR /home/container
 
-COPY run.sh /run.sh
-CMD [ "/bin/bash", "/run.sh" ]
+CMD [ "/bin/bash", "eval ${STARTUP}" ]
