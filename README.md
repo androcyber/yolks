@@ -6,7 +6,7 @@
     - <b>Description:</b> A compiler for Counter-Strike plugins.
     - <b>Download:</b> <code>ghcr.io/androcyber/yolks:compiler</code>
 - ReHLDS
-    - <b>Description:</b> A server software based on ReHLDS for Counter-Strike.
+    - <b>Description:</b> A server software based ReHLDS for Counter-Strike servers.
     - <b>Download:</b> <code>ghcr.io/androcyber/yolks:rehlds</code>
 
 ### Minecraft Egg's
