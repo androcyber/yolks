@@ -8,7 +8,5 @@ RUN apt -y upgrade
 RUN apt -y install lib32gcc1
 
 WORKDIR /home/container
-
-RUN cp /run.sh /Counter-Strike/Compiler/run.sh
-
+COPY ./run.sh /run.sh
 CMD [ "/bin/bash", "/run.sh" ]
