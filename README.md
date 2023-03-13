@@ -1,5 +1,5 @@
 <h1 align="center">My Docker Images for Pterodactyl Egg's</h1>
-<h4 align="center"></h4><br>
+<h4 align="center">This egg's made for HIVERIA GAMING PROJECTS. Please do not use without permit.</h4><br>
 
 ### Counter-Strike Egg's
 - Compiler
