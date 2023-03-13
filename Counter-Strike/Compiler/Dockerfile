@@ -2,14 +2,12 @@ FROM ubuntu:18.04
 
 LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
+RUN useradd -d /home/container -m container
 RUN apt -y update
 RUN apt -y upgrade
 RUN apt -y install lib32gcc1
 
-RUN useradd -d /home/container -m container
-USER container
-ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
-CMD [ "/bin/bash" ]
-ENTRYPOINT [ "cd /home/container", "echo -------------------------------------------------------------------------------------------------------------", "echo HIVERIA | Sunucu başlatılıyor...", "echo -------------------------------------------------------------------------------------------------------------", eval ${STARTUP} ]
+COPY run.sh /run.sh
+CMD [ "/bin/bash", "/run.sh" ]
