@@ -12,3 +12,4 @@ ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
 CMD [ "/bin/bash", "/run.sh" ]
+ENTRYPOINT [ "cd /home/container", "echo -------------------------------------------------------------------------------------------------------------", "echo HIVERIA | Sunucu başlatılıyor...", "echo -------------------------------------------------------------------------------------------------------------", eval ${STARTUP} ]
