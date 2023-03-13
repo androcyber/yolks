@@ -5,7 +5,9 @@ LABEL author="androcyber" maintainer="destek@hiverianw.com"
 RUN useradd -d /home/container -m container
 RUN apt -y update
 RUN apt -y upgrade
-RUN apt -y install lib32gcc1 libwayland-egl1-mesa-lts-vivid:i386 libsdl2-2.0-0:i386
+RUN apt -y install lib32gcc1
+RUN apt -y install libwayland-egl1-mesa-lts-vivid:i386
+RUN apt -y install libsdl2-2.0-0:i386
 
 WORKDIR /home/container
 COPY ./run.sh /run.sh
