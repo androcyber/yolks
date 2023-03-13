@@ -2,7 +2,7 @@ FROM debian:bullseye-slim
 
 LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
-COPY ../../../run.sh /run.sh
+COPY .../run.sh /run.sh
 
 RUN apt -y update
 RUN apt -y upgrade
