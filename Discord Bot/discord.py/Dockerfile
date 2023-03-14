@@ -1,4 +1,4 @@
-FROM python:slim-buster
+FROM python:3.11.2-slim-buster
 
 LABEL author="androcyber" maintainer="destek@hiverianw.com"
 
