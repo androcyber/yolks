@@ -6,7 +6,7 @@ RUN useradd -d /home/container -m container
 RUN apt -y update
 RUN apt -y upgrade
 RUN apt -y install libffi-dev
-RUN apt -y install libnacl
+RUN apt -y install python-libnacl
 RUN apt -y install python3-dev
 
 WORKDIR /home/container
